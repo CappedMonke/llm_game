@@ -22,8 +22,18 @@ public class CameraController : MonoBehaviour {
 
     [Header("Rotation Settings")]
     private float rotationSpeed = 1.5f;
-    private float rotationMaxXDelta = 5f;
+    private float rotationMaxXDelta = 8f;
     private float rotationXStart;
+
+    [Header("Zoom Settings")]
+    private int zoomCurrent = 2;
+    private int zoomMax = 4;
+    private int zoomMin = 0;
+    private float zoomSpeedMultiplier = 1.3f;
+    private float zoomSpeedBonus;
+    private int[] zoomAngles = { 75, 62, 50, 35, 20 };
+    private int[] zoomHeight = { 80, 40, 25, 15, 5 };
+    private int[] zoomFOV = { 35, 30, 25, 25, 25 };
 
     private void Awake() {
         if (Instance != null && Instance != this) {
@@ -35,7 +45,8 @@ public class CameraController : MonoBehaviour {
 
     void Start() {
         movementSpeed = movementSpeedDefault;
-        rotationXStart = transform.GetChild(0).eulerAngles.x;
+        rotationXStart = zoomAngles[zoomCurrent];
+        zoomSpeedBonus = Mathf.Pow(zoomSpeedMultiplier, (zoomMax - zoomCurrent));
     }
 
     // Update is called once per frame
@@ -49,8 +60,9 @@ public class CameraController : MonoBehaviour {
     private void HandleCameraMovement() {
         HandleRotation();
 
-        Vector3 newPosition = Vector3.zero;
-        if (keyboardMovement) { newPosition = HandleKeyboardMovement(); }
+        Vector3 newPosition = HandleZoom();
+
+        if (keyboardMovement) { newPosition += HandleKeyboardMovement(); }
         if (dragMovement) { newPosition += HandleDragMovement(); }
 
         transform.position = Vector3.Lerp(transform.position, newPosition, 0.05f * cameraSnappiness);
@@ -71,7 +83,7 @@ public class CameraController : MonoBehaviour {
             deltaPosition -= (transform.right);
         }
         deltaPosition.Normalize();
-        return transform.position + (deltaPosition * movementSpeed);
+        return transform.position + (deltaPosition * movementSpeed * zoomSpeedBonus);
     }
 
     private Vector3 HandleDragMovement() {
@@ -113,5 +125,35 @@ public class CameraController : MonoBehaviour {
             }
             transform.GetChild(0).eulerAngles += new Vector3(additionalRotation, 0, 0);
         }
+    }
+
+    private Vector3 HandleZoom() {
+        Vector3 zoomDelta = Vector3.zero;
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f && zoomCurrent < zoomMax) { // Zoom in
+            zoomCurrent++;
+            zoomSpeedBonus = Mathf.Pow(zoomSpeedMultiplier, (zoomMax - zoomCurrent));
+            if (zoomCurrent == zoomMax) zoomDelta = transform.forward * 180;
+        } else if (Input.GetAxis("Mouse ScrollWheel") < 0f && zoomCurrent > zoomMin) { // Zoom out
+            zoomCurrent--;
+            zoomSpeedBonus = Mathf.Pow(zoomSpeedMultiplier, (zoomMax - zoomCurrent));
+            if (zoomCurrent == zoomMax - 1) zoomDelta = transform.forward * -180;
+        } else {
+            return Vector3.zero;
+        }
+        transform.position = new Vector3(
+            transform.position.x,
+            zoomHeight[zoomCurrent],
+            transform.position.z);
+
+        rotationXStart = zoomAngles[zoomCurrent];
+
+            transform.GetChild(0).transform.eulerAngles = new Vector3(
+                zoomAngles[zoomCurrent],
+                transform.GetChild(0).transform.eulerAngles.y,
+                transform.GetChild(0).transform.eulerAngles.z);
+
+        transform.GetChild(0).GetComponent<Camera>().fieldOfView = zoomFOV[zoomCurrent];
+
+        return zoomDelta;
     }
 }
