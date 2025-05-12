@@ -20,6 +20,11 @@ public class CameraController : MonoBehaviour {
     private Vector3 dragStartPosition;
     private Vector3 dragCurrentPosition;
 
+    [Header("Rotation Settings")]
+    private float rotationSpeed = 1.5f;
+    private float rotationMaxXDelta = 5f;
+    private float rotationXStart;
+
     private void Awake() {
         if (Instance != null && Instance != this) {
             Destroy(gameObject);
@@ -30,6 +35,7 @@ public class CameraController : MonoBehaviour {
 
     void Start() {
         movementSpeed = movementSpeedDefault;
+        rotationXStart = transform.GetChild(0).eulerAngles.x;
     }
 
     // Update is called once per frame
@@ -41,6 +47,8 @@ public class CameraController : MonoBehaviour {
     }
 
     private void HandleCameraMovement() {
+        HandleRotation();
+
         Vector3 newPosition = Vector3.zero;
         if (keyboardMovement) { newPosition = HandleKeyboardMovement(); }
         if (dragMovement) { newPosition += HandleDragMovement(); }
@@ -85,5 +93,25 @@ public class CameraController : MonoBehaviour {
             }
         }
         return Vector3.zero;
+    }
+
+    private void HandleRotation() {
+        if (Input.GetMouseButton(1)) {
+            transform.eulerAngles += new Vector3(0, rotationSpeed * Input.GetAxis("Mouse X"), 0);
+            float additionalRotation = rotationSpeed * -0.5f * Input.GetAxis("Mouse Y");
+            float currentRotation = transform.GetChild(0).eulerAngles.x;
+            if (additionalRotation > 0) { // Going down => More Rotation
+                if (currentRotation > rotationXStart + rotationMaxXDelta) return;
+                else {
+                    additionalRotation = Mathf.Min(rotationXStart + rotationMaxXDelta - currentRotation, additionalRotation);
+                }
+            } else {
+                if (currentRotation < rotationXStart - rotationMaxXDelta) return;
+                else {
+                    additionalRotation = Mathf.Max(rotationXStart - rotationMaxXDelta - currentRotation, additionalRotation);
+                }
+            }
+            transform.GetChild(0).eulerAngles += new Vector3(additionalRotation, 0, 0);
+        }
     }
 }
