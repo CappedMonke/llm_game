@@ -16,7 +16,6 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 0}
     - {fileID: 11400000, guid: 8e5e59c6faacc0f47bb044634a669d95, type: 2}
     - {fileID: 1782610401302288989, guid: 3e9ee34ce8fbeda47bec70ec53cbe9b0, type: 3}
     SerializedBytesString: 
@@ -2580,8 +2579,8 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: tileWorldCreator
-      Entry: 10
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: paintPreviewTexture
       Entry: 6
       Data: 
@@ -5116,8 +5115,8 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: tileWorldCreator
-      Entry: 10
-      Data: 0
+      Entry: 6
+      Data: 
     - Name: paintPreviewTexture
       Entry: 6
       Data: 
@@ -5194,7 +5193,7 @@ MonoBehaviour:
       Data: 
     - Name: preset
       Entry: 10
-      Data: 1
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -5341,7 +5340,7 @@ MonoBehaviour:
       Data: false
     - Name: prefab
       Entry: 10
-      Data: 2
+      Data: 1
     - Name: instantiateChilds
       Entry: 5
       Data: false
