@@ -3,21 +3,20 @@ using TWC;
 
 public class MapHandler : MonoBehaviour {
 public TileWorldCreator twc;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() {
-        var _path = Application.streamingAssetsPath + "/Map_Island_BP.json";
-        twc.LoadBlueprintStackAndExecute(_path);
+        Debug.Log("Start");
+        twc.LoadBlueprintStack(Application.dataPath + "/Resources/Maps/Map_Island_TW");
+        Debug.Log("Loaded");
+        twc.ExecuteAllBlueprintLayers();
+        Debug.Log("Executed");
     }
 
     void BuildMap(TileWorldCreator _twc) {
         _twc.ExecuteAllBuildLayers(false);
-        Debug.Log("Build");
+        Debug.Log("Map Build Complete");
     }
 
     public void OnEnable() {
         twc.OnBlueprintLayersComplete += BuildMap;
-    }
-    public void OnDisable() {
-        twc.OnBlueprintLayersComplete -= BuildMap;
     }
 }
