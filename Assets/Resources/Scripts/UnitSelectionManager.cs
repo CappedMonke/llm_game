@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UnitSelectionManager : MonoBehaviour {
@@ -58,6 +59,7 @@ public class UnitSelectionManager : MonoBehaviour {
         unitsSelected.Clear();
 
         groundMarker.SetActive(false);
+
     }
 
     public void SelectUnit(GameObject selected, bool multiSelect) {
