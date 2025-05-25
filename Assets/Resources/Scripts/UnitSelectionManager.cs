@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class UnitSelectionManager : MonoBehaviour {
     public static UnitSelectionManager Instance { get; set; }
@@ -77,5 +78,11 @@ public class UnitSelectionManager : MonoBehaviour {
     private void SetUnitMovement(GameObject selected, bool movementEnabled) {
         selected.GetComponent<UnitMovement>().enabled = movementEnabled;
         selected.transform.GetChild(0).gameObject.SetActive(movementEnabled);
+    }
+
+    public void ActivateUnits() {
+        foreach (GameObject unit in units) {
+            unit.GetComponent<NavMeshAgent>().enabled = true;
+        }
     }
 }

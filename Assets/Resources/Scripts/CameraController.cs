@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour {
 
     [Header("Rotation Settings")]
     private float rotationSpeed = 1.5f;
-    private float rotationMaxXDelta = 8f;
+    private float rotationMaxXDelta = 10f;
     private float rotationXStart;
 
     [Header("Zoom Settings")]
@@ -31,9 +31,9 @@ public class CameraController : MonoBehaviour {
     private int zoomMin = 0;
     private float zoomSpeedMultiplier = 1.3f;
     private float zoomSpeedBonus;
-    private int[] zoomAngles = { 75, 62, 50, 35, 20 };
-    private int[] zoomHeight = { 80, 40, 25, 15, 5 };
-    private int[] zoomFOV = { 35, 30, 25, 25, 25 };
+    private int[] zoomAngles = { 70, 60, 50, 35, 15 };
+    private int[] zoomHeight = { 120, 70, 45, 30, 10 };
+    private int[] zoomFOV = { 55, 50, 40, 35, 35 };
 
     private void Awake() {
         if (Instance != null && Instance != this) {
