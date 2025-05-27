@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
@@ -23,5 +24,10 @@ public class GameController : MonoBehaviour {
     private void CheckIfReady() {
         if (!isMapReady) return;
         isPlaying = true;
+        ActivateWorld();
+    }
+
+    private void ActivateWorld() {
+        GameObject.Find("UI").transform.Find("UnitSelectionUI").gameObject.SetActive(true);
     }
 }
