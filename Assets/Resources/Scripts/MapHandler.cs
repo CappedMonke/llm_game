@@ -34,11 +34,11 @@ public TileWorldCreator twc;
 
     private void SetGameLayerRecursive(GameObject mapObject, int layer) {
         mapObject.layer = layer;
-        foreach (Transform child in mapObject.transform) {
-            child.gameObject.layer = layer;
+        foreach (Transform mapObjectChild in mapObject.transform) {
+            mapObjectChild.gameObject.layer = layer;
 
-            if (child.GetComponentInChildren<Transform>() != null) {
-                SetGameLayerRecursive(child.gameObject, layer);
+            if (mapObjectChild.GetComponentInChildren<Transform>() != null) {
+                SetGameLayerRecursive(mapObjectChild.gameObject, layer);
             }
         }
     }

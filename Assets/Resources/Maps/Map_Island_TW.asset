@@ -12385,7 +12385,7 @@ MonoBehaviour:
         TileWorldCreator]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 4|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
@@ -12403,7 +12403,7 @@ MonoBehaviour:
       Data: true
     - Name: foldout
       Entry: 5
-      Data: false
+      Data: true
     - Name: resultFailed
       Entry: 5
       Data: false
@@ -12432,6 +12432,42 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 6|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
+    - Name: actionName
+      Entry: 1
+      Data: Cellular Automata
+    - Name: action
+      Entry: 7
+      Data: 7|TWC.Actions.CellularAutomata, TileWorldCreator
+    - Name: guid
+      Entry: 2
+      Data: 3acc5581aa2d48b3a6020fd558755f7c
+    - Name: active
+      Entry: 5
+      Data: false
+    - Name: foldout
+      Entry: 5
+      Data: true
+    - Name: resultFailed
+      Entry: 5
+      Data: false
+    - Name: numberOfSteps
+      Entry: 3
+      Data: 2
+    - Name: deathLimit
+      Entry: 3
+      Data: 4
+    - Name: birthLimit
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -12442,7 +12478,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|TWC.TileWorldCreatorAsset+BlueprintLayerData, TileWorldCreator
+      Data: 8|TWC.TileWorldCreatorAsset+BlueprintLayerData, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 466407b6debb42f49e70e6ea8d0d82c9
@@ -12454,7 +12490,7 @@ MonoBehaviour:
       Data: Inner
     - Name: map
       Entry: 7
-      Data: 7|System.Boolean[,], mscorlib
+      Data: 9|System.Boolean[,], mscorlib
     - Name: 
       Entry: 12
       Data: 4096
@@ -24787,20 +24823,20 @@ MonoBehaviour:
       Data: false
     - Name: stack
       Entry: 7
-      Data: 8|System.Collections.Generic.List`1[[TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack,
+      Data: 10|System.Collections.Generic.List`1[[TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack,
         TileWorldCreator]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 9|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
+      Data: 11|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
     - Name: actionName
       Entry: 1
       Data: Add
     - Name: action
       Entry: 7
-      Data: 10|TWC.Actions.Add, TileWorldCreator
+      Data: 12|TWC.Actions.Add, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 6c474b792be1430e93d2c4d5c8d153e6
@@ -24827,13 +24863,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 11|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
+      Data: 13|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
     - Name: actionName
       Entry: 1
       Data: Shrink
     - Name: action
       Entry: 7
-      Data: 12|TWC.Actions.Shrink, TileWorldCreator
+      Data: 14|TWC.Actions.Shrink, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 996ea995941f44318665fb155ed66141
@@ -24863,7 +24899,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 13|TWC.TileWorldCreatorAsset+BlueprintLayerData, TileWorldCreator
+      Data: 15|TWC.TileWorldCreatorAsset+BlueprintLayerData, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 4cb5303e3d4c44bf90d270ed358661ff
@@ -24875,7 +24911,7 @@ MonoBehaviour:
       Data: Water
     - Name: map
       Entry: 7
-      Data: 14|System.Boolean[,], mscorlib
+      Data: 16|System.Boolean[,], mscorlib
     - Name: 
       Entry: 12
       Data: 4096
@@ -37208,20 +37244,20 @@ MonoBehaviour:
       Data: false
     - Name: stack
       Entry: 7
-      Data: 15|System.Collections.Generic.List`1[[TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack,
+      Data: 17|System.Collections.Generic.List`1[[TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack,
         TileWorldCreator]], mscorlib
     - Name: 
       Entry: 12
       Data: 2
     - Name: 
       Entry: 7
-      Data: 16|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
+      Data: 18|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
     - Name: actionName
       Entry: 1
       Data: Add
     - Name: action
       Entry: 7
-      Data: 17|TWC.Actions.Add, TileWorldCreator
+      Data: 19|TWC.Actions.Add, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: e04a67ed80fb428e918e630810c35c1a
@@ -37248,13 +37284,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 18|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
+      Data: 20|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
     - Name: actionName
       Entry: 1
       Data: Invert
     - Name: action
       Entry: 7
-      Data: 19|TWC.Actions.Invert, TileWorldCreator
+      Data: 21|TWC.Actions.Invert, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 90ed467753694e7094bb27372555d722
@@ -37284,7 +37320,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 20|TWC.TileWorldCreatorAsset+BlueprintLayerData, TileWorldCreator
+      Data: 22|TWC.TileWorldCreatorAsset+BlueprintLayerData, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 689bac41b99c40a28a1c5367686a1704
@@ -37296,7 +37332,7 @@ MonoBehaviour:
       Data: Trees
     - Name: map
       Entry: 7
-      Data: 21|System.Boolean[,], mscorlib
+      Data: 23|System.Boolean[,], mscorlib
     - Name: 
       Entry: 12
       Data: 4096
@@ -49629,20 +49665,20 @@ MonoBehaviour:
       Data: false
     - Name: stack
       Entry: 7
-      Data: 22|System.Collections.Generic.List`1[[TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack,
+      Data: 24|System.Collections.Generic.List`1[[TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack,
         TileWorldCreator]], mscorlib
     - Name: 
       Entry: 12
       Data: 3
     - Name: 
       Entry: 7
-      Data: 23|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
+      Data: 25|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
     - Name: actionName
       Entry: 1
       Data: Cellular Automata
     - Name: action
       Entry: 7
-      Data: 24|TWC.Actions.CellularAutomata, TileWorldCreator
+      Data: 26|TWC.Actions.CellularAutomata, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 5dd75bf9a6b14ee6b6620d2467563f16
@@ -49672,13 +49708,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 25|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
+      Data: 27|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
     - Name: actionName
       Entry: 1
       Data: Random Noise
     - Name: action
       Entry: 7
-      Data: 26|TWC.Actions.RandomNoise, TileWorldCreator
+      Data: 28|TWC.Actions.RandomNoise, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 98b5085ab48c4383b7df4250381fbd35
@@ -49702,13 +49738,13 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 27|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
+      Data: 29|TWC.TileWorldCreatorAsset+BlueprintLayerData+ActionStack, TileWorldCreator
     - Name: actionName
       Entry: 1
       Data: Overlap With
     - Name: action
       Entry: 7
-      Data: 28|TWC.Actions.OverlapWith, TileWorldCreator
+      Data: 30|TWC.Actions.OverlapWith, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 1c86b70073dd45ca9c814baf29e78ac8
@@ -49747,14 +49783,14 @@ MonoBehaviour:
       Data: 
     - Name: mapBuildLayers
       Entry: 7
-      Data: 29|System.Collections.Generic.List`1[[TWC.Actions.TWCBuildLayer, TileWorldCreator]],
+      Data: 31|System.Collections.Generic.List`1[[TWC.Actions.TWCBuildLayer, TileWorldCreator]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 4
     - Name: 
       Entry: 7
-      Data: 30|TWC.Actions.InstantiateTiles, TileWorldCreator
+      Data: 32|TWC.Actions.InstantiateTiles, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 30d2aa285ad84776b2f1197504ecb2ac
@@ -49775,14 +49811,14 @@ MonoBehaviour:
       Data: 0
     - Name: tiles
       Entry: 7
-      Data: 31|System.Collections.Generic.List`1[[TWC.Actions.InstantiateTiles+TilePresets,
+      Data: 33|System.Collections.Generic.List`1[[TWC.Actions.InstantiateTiles+TilePresets,
         TileWorldCreator]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 32|TWC.Actions.InstantiateTiles+TilePresets, TileWorldCreator
+      Data: 34|TWC.Actions.InstantiateTiles+TilePresets, TileWorldCreator
     - Name: rndSelectionWeight
       Entry: 4
       Data: 1
@@ -49893,7 +49929,7 @@ MonoBehaviour:
       Data: 
     - Name: ignoreLayers
       Entry: 7
-      Data: 33|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 35|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -49908,7 +49944,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 34|TWC.Actions.InstantiateTiles, TileWorldCreator
+      Data: 36|TWC.Actions.InstantiateTiles, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: 925d83ff5e104f88b3df35ef0dbe0e86
@@ -49929,14 +49965,14 @@ MonoBehaviour:
       Data: 0
     - Name: tiles
       Entry: 7
-      Data: 35|System.Collections.Generic.List`1[[TWC.Actions.InstantiateTiles+TilePresets,
+      Data: 37|System.Collections.Generic.List`1[[TWC.Actions.InstantiateTiles+TilePresets,
         TileWorldCreator]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 36|TWC.Actions.InstantiateTiles+TilePresets, TileWorldCreator
+      Data: 38|TWC.Actions.InstantiateTiles+TilePresets, TileWorldCreator
     - Name: rndSelectionWeight
       Entry: 4
       Data: 1
@@ -50047,7 +50083,7 @@ MonoBehaviour:
       Data: 
     - Name: ignoreLayers
       Entry: 7
-      Data: 37|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 39|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -50062,7 +50098,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 38|TWC.Actions.InstantiateTiles, TileWorldCreator
+      Data: 40|TWC.Actions.InstantiateTiles, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: e9df755fdf6d4830b8bcbe1f2c17503a
@@ -50083,14 +50119,14 @@ MonoBehaviour:
       Data: 0
     - Name: tiles
       Entry: 7
-      Data: 39|System.Collections.Generic.List`1[[TWC.Actions.InstantiateTiles+TilePresets,
+      Data: 41|System.Collections.Generic.List`1[[TWC.Actions.InstantiateTiles+TilePresets,
         TileWorldCreator]], mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 40|TWC.Actions.InstantiateTiles+TilePresets, TileWorldCreator
+      Data: 42|TWC.Actions.InstantiateTiles+TilePresets, TileWorldCreator
     - Name: rndSelectionWeight
       Entry: 4
       Data: 1
@@ -50201,7 +50237,7 @@ MonoBehaviour:
       Data: 
     - Name: ignoreLayers
       Entry: 7
-      Data: 41|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
+      Data: 43|System.Collections.Generic.List`1[[System.String, mscorlib]], mscorlib
     - Name: 
       Entry: 12
       Data: 0
@@ -50216,7 +50252,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 42|TWC.Actions.InstantiateObjects, TileWorldCreator
+      Data: 44|TWC.Actions.InstantiateObjects, TileWorldCreator
     - Name: guid
       Entry: 2
       Data: b289b2deee2843fa8f42deff6c9be04f
@@ -50228,7 +50264,7 @@ MonoBehaviour:
       Data: Trees
     - Name: foldout
       Entry: 5
-      Data: true
+      Data: false
     - Name: active
       Entry: 5
       Data: true
@@ -50542,6 +50578,7 @@ MonoBehaviour:
     mapResultFailed: 0
     stack:
     - actionName: Texture
+    - actionName: Cellular Automata
   - active: 1
     layerName: Inner
     randomSeedOverride: 0
