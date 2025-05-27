@@ -28,6 +28,7 @@ public class UnitSelectionManager : MonoBehaviour {
 
 
     void Update() {
+        if (!GameController.Instance.isPlaying) return;
         if (Input.GetMouseButtonDown(0)) {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 

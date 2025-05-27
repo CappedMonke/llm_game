@@ -51,6 +51,7 @@ public class CameraController : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (!GameController.Instance.isPlaying) return;
         HandleCameraMovement();
     
         if (Input.GetKeyDown(KeyCode.LeftShift)) { movementSpeed = movementSpeedDefault * movementSpeedFast; }

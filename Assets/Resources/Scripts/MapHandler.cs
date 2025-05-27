@@ -20,6 +20,8 @@ public TileWorldCreator twc;
         SetGameLayerRecursive(map, 7);
         UnitSelectionManager.Instance.ActivateUnits();
         map.AddComponent<NavMeshSurface>().BuildNavMesh();
+
+        GameController.Instance.isMapReady = true;
     }
 
     public void OnEnable() {
