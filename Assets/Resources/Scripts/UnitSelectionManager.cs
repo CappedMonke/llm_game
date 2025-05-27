@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 public class UnitSelectionManager : MonoBehaviour {
     public static UnitSelectionManager Instance { get; set; }
@@ -10,9 +11,15 @@ public class UnitSelectionManager : MonoBehaviour {
     public List<GameObject> unitsSelected = new List<GameObject>();
 
     private Camera cam;
+    [Header("Masks")]
     public LayerMask maskClickable;
     public LayerMask maskGround;
+
+    [Header("Marker")]
     public GameObject groundMarker;
+
+    [Header("Overlays")]
+    public GameObject singleUnitOverlay;
 
     private void Awake() {
         if (Instance != null && Instance != this) {
@@ -32,11 +39,13 @@ public class UnitSelectionManager : MonoBehaviour {
         if (Input.GetMouseButtonDown(0)) {
             Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, maskClickable)) {
-                SelectUnit(hit.collider.gameObject, Input.GetKey(KeyCode.LeftShift));
-            } else {
-                // Prevent deselection when multiselect is active
-                if (!Input.GetKey(KeyCode.LeftShift)) DeselectAll();
+            if (!EventSystem.current.IsPointerOverGameObject()) {
+                if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, maskClickable)) {
+                    SelectUnit(hit.collider.gameObject, Input.GetKey(KeyCode.LeftShift));
+                } else {
+                    // Prevent deselection when multiselect is active
+                    if (!Input.GetKey(KeyCode.LeftShift)) DeselectAll();
+                }
             }
         }
 
@@ -61,7 +70,7 @@ public class UnitSelectionManager : MonoBehaviour {
         unitsSelected.Clear();
 
         groundMarker.SetActive(false);
-
+        singleUnitOverlay.SetActive(false);
     }
 
     public void SelectUnit(GameObject selected, bool multiSelect) {
@@ -74,6 +83,9 @@ public class UnitSelectionManager : MonoBehaviour {
             unitsSelected.Remove(selected);
             SetUnitMovement(selected, false);
         }
+
+        if (unitsSelected.Count == 1) singleUnitOverlay.SetActive(true);
+        else singleUnitOverlay.SetActive(false);
     }
 
     private void SetUnitMovement(GameObject selected, bool movementEnabled) {

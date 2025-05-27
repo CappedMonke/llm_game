@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class UnitSelectionUI : MonoBehaviour {
     Camera cam;
@@ -23,11 +24,13 @@ public class UnitSelectionUI : MonoBehaviour {
     private void Update() {
         // Clicking
         if (Input.GetMouseButtonDown(0)) {
-            startPos = Input.mousePosition;
-            selectionBox = new Rect();
+            if (!EventSystem.current.IsPointerOverGameObject()) {
+                startPos = Input.mousePosition;
+                selectionBox = new Rect();
+            }
         }
         // Dragging
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0) && startPos != Vector2.zero) {
             if (boxVisual.rect.width > 0 || boxVisual.rect.height > 0) {
                 SelectUnits();
             }

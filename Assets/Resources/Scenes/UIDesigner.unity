@@ -423,6 +423,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: VillagerOverlay
       objectReference: {fileID: 0}
+    - target: {fileID: 5379430947558958790, guid: 8505b101e8d3d7e4b91b51118411721e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6972940774007334891, guid: 8505b101e8d3d7e4b91b51118411721e, type: 3}
+      propertyPath: m_CullTransparentMesh
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305881667283633287, guid: 8505b101e8d3d7e4b91b51118411721e, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305881667283633287, guid: 8505b101e8d3d7e4b91b51118411721e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305881667283633287, guid: 8505b101e8d3d7e4b91b51118411721e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7305881667283633287, guid: 8505b101e8d3d7e4b91b51118411721e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8782839590775698665, guid: 8505b101e8d3d7e4b91b51118411721e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
